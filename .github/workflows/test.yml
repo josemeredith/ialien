@@ -1,0 +1,21 @@
+name: Simple workflow test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: contents of the directory
+        run: ls -la
+      - name: current path
+        run: pwd
+      - name: kernel version
+        run: uname -a
