@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: contents of the directory
+      - name: contents of the directory 2
         run: ls -la
-      - name: current path
+      - name: current path 2
         run: pwd
-      - name: kernel version
+      - name: disk space
+        run: df -h
+      - name: kernel version 2
         run: uname -a
